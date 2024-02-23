@@ -23,6 +23,7 @@ public:
 };
 
 //双指针思路
+//很多双指针的题都是从第二个开始考虑的
 class SolutionTop {
 public:
     int removeDuplicates(vector<int>& nums) {
