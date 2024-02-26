@@ -2,3 +2,5 @@
 *.user
 Debug
 Release
+out
+build
