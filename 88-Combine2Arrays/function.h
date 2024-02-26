@@ -5,6 +5,7 @@ using namespace std;
 
 class Solution {
 public:
+	enum test;
 	void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n)
 	{
 		int flag1 = 0, flag2 = 0;
@@ -62,3 +63,4 @@ public:
 		nums1 = res;
 	};
 };
+
