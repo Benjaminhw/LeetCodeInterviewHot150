@@ -15,7 +15,7 @@ i + j < n
 class Solution {
 public:
     int jump(vector<int>& nums) {
-		int maxJumpLength = 0,minJumpStep=0;//最大跳跃距离
+		int maxJumpLength = 0,realMaxLength=0,minJumpStep=0;//最大跳跃距离
 		for (int i = 0; i < nums.size()/*-1是因为能跳到最后一步的都是true*/; ++i)
 		{
 
@@ -23,7 +23,12 @@ public:
 			{
 				if (nums[i] > maxJumpLength)
 				{
+					if (maxJumpLength <= 0)
+					{
+
+					}
 					++minJumpStep;
+					
 					maxJumpLength = nums[i];
 					//j = i;//j慢指针
 				}
