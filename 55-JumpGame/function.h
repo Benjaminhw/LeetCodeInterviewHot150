@@ -48,29 +48,28 @@ class Solution {
 public:
 	bool canJump(vector<int>& nums) {
 		//用双指针算0的个数
-		int zeroCount = 0;
-		int j = 0;
+		//int j = 0;
+		//双指针的思路但后面不需要双指针
 		int maxJumpLength = 0;//最大跳跃距离
 		for (int i = 0; i < nums.size() - 1/*-1是因为能跳到最后一步的都是true*/; ++i)
 		{
-			--maxJumpLength;//每移动一格，jumpLength就少 不管是不是0 jumplength都得减少
+			
 			if (nums[i] != 0) //记录能跳的最远的距离
 			{
-				zeroCount = 0;
 				if (nums[i] > maxJumpLength)
 				{
 					maxJumpLength = nums[i];
-					j = i;//j慢指针
+					//j = i;//j慢指针
 				}
 			}
 			else
 			{
-				++zeroCount;
-				if (maxJumpLength <= zeroCount)
+				if (maxJumpLength <= 0/*zeroCount 居然能有这种错*/)//
 				{
 					return false;
 				}
 			}
+			--maxJumpLength;//每移动一格，jumpLength就少 不管是不是0 jumplength都得减少
 		}
 		return true;
 	}
