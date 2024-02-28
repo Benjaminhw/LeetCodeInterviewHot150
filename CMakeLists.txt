@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("LeetCodeInterviewClassic150")
 
-# 包含子项目。
+# 包含子项目 也可以不包括在里面
 add_subdirectory ("26-RemoveTheRepeatedOnesInOrderedArray")
 add_subdirectory ("80-RemoveTheRepeatedOnesInOrderedArrayII")
 add_subdirectory ("169-MajorityElements")
@@ -18,3 +18,4 @@ add_subdirectory ("55-JumpGame")
 add_subdirectory ("45-JumpGameII")
 add_subdirectory ("274-H-Index")
 add_subdirectory ("380-O1InsertDeleteGetRandomElement")
+add_subdirectory ("238-ProductExceptItself")
