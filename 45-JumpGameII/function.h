@@ -28,7 +28,6 @@ public:
 			{
 				maxJumpLength = nums[i];
 				//j = i;//slower pointer j
-
 			}
 			//always calculate the real max jump length
 			if (realMaxJumpLength <= 0)
