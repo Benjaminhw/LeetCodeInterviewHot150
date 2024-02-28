@@ -11,7 +11,7 @@
 
 using namespace std;
 
-
+//本思路与“计数排序”的思路类似
 class Solution {
 public:
 	//倒序排列
