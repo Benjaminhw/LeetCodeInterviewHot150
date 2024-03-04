@@ -50,7 +50,8 @@ public:
 					((x == 'I') && (y == 'V' || y == 'X')) ||
 					((x == 'X') && (y == 'L' || y == 'C')) ||
 					((x == 'C') && (y == 'D' || y == 'M'))
-					))
+					)
+				)
 			{
 				//If it is the Complex kind, skip this round to the next round.
 				continue;
