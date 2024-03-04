@@ -21,6 +21,7 @@ public:
 			//Candy[0] = 1;
 			return 1;
 		}
+		//需要把第一个元素置1，因为你是用ratings来初始化的
 		Max[0] = 1;
 		for (int i = 1; i < ratings.size(); ++i)
 		{
