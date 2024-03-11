@@ -10,11 +10,26 @@ using namespace std;
 
 class Solution {
 public:
-    int strStr(string haystack, string needle) {
-        int j, cmp;
-        for (int i = 0; i < haystack.size(); ++i)
-        {
-            if(haystack[i]==)
-        }
-    }
+	int strStr(string haystack, string needle) {
+		int j = 0, cmp;
+		for (int i = 0; i < haystack.size(); ++i)
+		{
+			if (haystack[i] == needle[j])
+			{
+				int temp = i;
+				while (i < haystack.size() && j < needle.size() && haystack[i] == needle[j])
+				{
+					if (j == needle.size() - 1)
+					{
+						return temp;
+					}
+					++i;
+					++j;
+				}
+				j = 0;
+				i -= 2;
+			}
+		}
+		return -1;
+	}
 };
