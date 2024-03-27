@@ -11,54 +11,56 @@ using namespace std;
 
 
 class Solution {
-private:
-	int next[];
+public:
 	void getNext(const string& p, int next[])
 	{
 		int len = (int)p.size();
 		next[0] = -1;
+
+		// k²»»á³¬¹ýj
 		int k = -1;
 		int j = 0;
+
 		while (j < len - 1)
-		{
-			if (k == -1 || p[j] == p[k])
+		{ // j does not go back.
+			if (k == -1 /*For convenience*/ || p[j] == p[k]) // First one or equal ones.
 			{
 				++j;
 				++k;
-				next[j] = k;//You have to realize that pre and the post are in the same order.
+				next[j] = k; // You have to realize that pre and the post are in the same order.
 			}
 			else
 			{
-				k = next[k];//Here it is a reusing of iteself. regard itself as the table to look for.
+				k = next[k]; // Here it is a reusing of iteself. regard itself as the table to look for.
 			}
 		}
-
 	}
+
 public:
 	int strStr(string haystack, string needle) {
-		int j = 0, cmp;
+		int j = 0, i = 0, cmp;
 		const int x = (const int)haystack.size();
 
+		// build the next array. It's very important to record and comprehand the whole process.
 		int next[5000] = { 0 };
-		//build the next array. It's very important to record and comprehand the whole process.
+
+		// get the next array.
 		getNext(needle, next);
 
-		for (int i = 0; i < haystack.size(); ++i)
+		while (i < haystack.size())
 		{
-			if (haystack[i] == needle[j])
+			if (j == -1 || haystack[i] == needle[j])
 			{
-				int temp = i;
-				while (i < haystack.size() && j < needle.size() && haystack[i] == needle[j])
+				++i;
+				++j;
+				if (j >= needle.size())
 				{
-					if (j == needle.size() - 1)
-					{
-						return temp;
-					}
-					++i;
-					++j;
+					return i - j;
 				}
-				j = 0;
-				--i;
+			}
+			else
+			{
+				j = next[j];
 			}
 		}
 		return -1;
