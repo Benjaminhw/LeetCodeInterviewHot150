@@ -30,6 +30,8 @@ add_subdirectory ("14-TheLongestPrefix")
 add_subdirectory ("151-ReverseTheSequenceOfWords")
 add_subdirectory ("6-Z-ShapeTransform")
 add_subdirectory ("28-FindTheFirstCompareInString")
+add_subdirectory ("68-WordsAlignment")
+
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
