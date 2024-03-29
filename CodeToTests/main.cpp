@@ -1,10 +1,6 @@
 //vcpkg cmake
 
-#include <iostream>
-#include <fstream>
-#include <map>
-#include <string>
-#include <sstream>
+
 #include "function.h"
 
 int main()

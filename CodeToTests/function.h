@@ -16,6 +16,10 @@
 #include "stddef.h"
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
+#include <fstream>
+#include <map>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
