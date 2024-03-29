@@ -6,7 +6,7 @@ cmake_minimum_required (VERSION 3.12)
 project ("LeetCodeInterviewClassic150")
 
 # 包含子项目 CodeToTests
-# add_subdirectory ("CodeToTests")
+add_subdirectory ("CodeToTests")
 add_subdirectory ("26-RemoveTheRepeatedOnesInOrderedArray")
 add_subdirectory ("80-RemoveTheRepeatedOnesInOrderedArrayII")
 add_subdirectory ("169-MajorityElements")

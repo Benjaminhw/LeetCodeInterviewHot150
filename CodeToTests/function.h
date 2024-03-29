@@ -11,9 +11,11 @@
 
 #include <iostream>
 #include <vector>
-#include "curl/curl.h"
-#include "rapidjson/document.h"
+#include <curl/curl.h>
+#include <rapidjson/document.h>
 #include "stddef.h"
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
 
 using namespace std;
 
@@ -25,9 +27,12 @@ public:
 
 class GetStockInfFac {
 public:
-    size_t writeMemoryCallback(void* contents, size_t size, size_t nmemb, std::string* buffer) {
+    int mainFunction();
+    std::map<std::string, std::string> parseString(const std::string& str, char delimiter);
+    std::string mapToJson(const std::map<std::string, std::string>& data);
+    static size_t writeMemoryCallback(char* contents, size_t size, size_t nmemb, void* buffer) {
         size_t totalSize = size * nmemb;
-        buffer->append((char*)contents, totalSize);
+        ((string *)buffer)->append(contents, totalSize);
         return totalSize;
     }
 };
