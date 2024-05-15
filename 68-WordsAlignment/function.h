@@ -29,6 +29,7 @@ public:
 			int leftBlankCount = 0;
 			bool isLastLine = false;
 			//outPut in the same line.
+			//
 			vector<string> lineWords;
 			while (wordCountWithOneBlank <= maxWidth)
 			{
@@ -37,6 +38,7 @@ public:
 				{
 					//set the flag to true.
 					isLastLine = true;
+					//
 				}
 
 				//If its length doesn't exceed the width.
@@ -54,7 +56,7 @@ public:
 					//Calculate the blank that need to be filled in
 					if (isLastLine)
 					{
-
+						
 					}
 					else
 					{
