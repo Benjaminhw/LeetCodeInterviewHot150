@@ -38,35 +38,66 @@ public:
 				{
 					//set the flag to true.
 					isLastLine = true;
-					//
 				}
 
 				//If its length doesn't exceed the width.
-				//Plus one is because there has to be a blank between words. 
-				if (wordCountWithOneBlank + words[i].size() + 1 <= maxWidth)
+				//Making it plus one is because there has to be a blank between words. 
+				//Would last word makes some difference ?? --or the very first word 
+				//If it's the first word
+				if (wordCountWithOneBlank + words[i].size() + 1 <= maxWidth || wordCountWithOneBlank == 0)
 				{
-					wordCountWithOneBlank += words[i].size() + 1;
+					if (wordCountWithOneBlank == 0)
+					{
+						wordCountWithOneBlank += words[i].size();
+					}
+					else
+					{
+						wordCountWithOneBlank += words[i].size() + 1;
+					}
 					lineWords.emplace_back(words[i]);
 					++i;
 				}
-
 				//if it exceeds, output the result in this line.
 				else
 				{
 					//Calculate the blank that need to be filled in
 					if (isLastLine)
 					{
-						
+						for (auto& y : lineWords)
+						{
+							cout << y;
+							if (y != lineWords.back())
+							{
+								//if not the last word 
+								cout << " ";
+							}
+						}
 					}
 					else
 					{
 						leftBlankCount = maxWidth - wordCountWithOneBlank;
+						int splitBlank = leftBlankCount / lineWords.size();
+						int splitBlankLeft = leftBlankCount % (lineWords.size());
+						for (auto& y : lineWords)
+						{
+							cout << y;
+							cout << " ";
+							for (int k = 0; k < splitBlank; ++k)
+							{
+								cout << " ";
+							}
+							if (splitBlankLeft > 0)
+							{
+								cout << " ";
+								--splitBlankLeft;
+							}
+						}
 						break;
 					}
 				}
 			}
 			//words sequence
-			words[i];
+			//words[i];
 		}
 	}
 };
