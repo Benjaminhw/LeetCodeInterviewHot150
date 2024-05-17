@@ -31,6 +31,8 @@ add_subdirectory ("151-ReverseTheSequenceOfWords")
 add_subdirectory ("6-Z-ShapeTransform")
 add_subdirectory ("28-FindTheFirstCompareInString")
 add_subdirectory ("68-WordsAlignment")
+add_subdirectory ("125-IsPalindrome")
+add_subdirectory ("392-IsSubsequence")
 
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
