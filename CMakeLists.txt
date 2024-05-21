@@ -34,6 +34,7 @@ add_subdirectory ("68-WordsAlignment")
 add_subdirectory ("125-IsPalindrome")
 add_subdirectory ("392-IsSubsequence")
 add_subdirectory ("167-TwoSum")
+add_subdirectory ("11-ContainerThatCanHoldMostWater")
 
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
