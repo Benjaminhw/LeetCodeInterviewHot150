@@ -8,7 +8,15 @@ add_executable (CodeToTests
 "main.cpp"
 )
 
-set(CMAKE_TOOLCHAIN_FILE "D:/learning/StockMonitor/vcpkg/scripts/buildsystems/vcpkg.cmake")
+# 获取当前CMakeLists.txt文件的目录
+get_filename_component(CURRENT_DIR ${CMAKE_CURRENT_LIST_DIR} ABSOLUTE)
+
+# 获取上两层的目录
+get_filename_component(PARENT_DIR1 ${CURRENT_DIR} DIRECTORY)
+get_filename_component(PARENT_DIR2 ${PARENT_DIR1} DIRECTORY)
+
+message(STATUS "Current directory: ${PARENT_DIR1}/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "${PARENT_DIR1}/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 find_package(CURL REQUIRED)
 target_link_libraries(CodeToTests PRIVATE CURL::libcurl)
