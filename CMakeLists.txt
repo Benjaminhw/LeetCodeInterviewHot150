@@ -37,6 +37,7 @@ add_subdirectory ("167-TwoSum")
 add_subdirectory ("11-ContainerThatCanHoldMostWater")
 add_subdirectory ("15-ThreeSum")
 add_subdirectory ("209-minSubArrayLen")
+add_subdirectory ("3-lengthOfLongestNoRepeatSubstring")
 
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
