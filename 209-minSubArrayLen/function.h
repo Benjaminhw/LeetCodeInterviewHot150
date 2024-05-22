@@ -30,7 +30,7 @@ public:
 			{
 				if (result == 0 || j - i + 1 < result)
 				{
-					result = j - i;
+					result = j - i + 1;
 				}
 				tempSum -= nums[i];
 				++i;
