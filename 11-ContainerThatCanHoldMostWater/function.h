@@ -51,6 +51,8 @@ public:
 		//two pointers? compare the height's increment and the width's decrease.
 		//A left pointer and a right pointer.
 		int leftPointer = 0, rightPointer = height.size()-1;
+		//一开始漏了初始状态
+		result = min(height[leftPointer], height[rightPointer]) * (rightPointer - leftPointer);
 		while (leftPointer != rightPointer)
 		{
 			if (height[leftPointer] > height[rightPointer])
