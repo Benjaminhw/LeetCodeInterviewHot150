@@ -28,6 +28,10 @@ public:
 	}
 
 	bool isAnagram(string s, string t) {
+		if (s.size() != t.size())
+		{
+			return false;
+		}
 		unordered_map<char, int> hashMapS;
 		unordered_map<char, int> hashMapT;
 		for (auto& x : s)

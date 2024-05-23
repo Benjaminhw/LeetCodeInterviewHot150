@@ -17,20 +17,32 @@ using namespace std;
 class Solution {
 public:
 	bool isIsomorphic(string s, string t) {
-		unordered_map<char, char> hashMap;
+		unordered_map<char, char> hashMapS;
+		unordered_map<char, char> hashMapT;
 		if (s.size() != t.size())
 		{
 			return false;
 		}
 		for (int i = 0; i < s.size(); ++i)
 		{
-			if (hashMap.find(s[i]) == hashMap.end())
+			if (hashMapS.find(s[i]) == hashMapS.end())
 			{
-				hashMap[s[i]] = t[i];
+				hashMapS[s[i]] = t[i];
 			}
 			else
 			{
-				if (hashMap[s[i]] != t[i])
+				if (hashMapS[s[i]] != t[i])
+				{
+					return false;
+				}
+			}
+			if (hashMapT.find(t[i]) == hashMapT.end())
+			{
+				hashMapT[t[i]] = s[i];
+			}
+			else
+			{
+				if (hashMapT[t[i]] != s[i])
 				{
 					return false;
 				}
