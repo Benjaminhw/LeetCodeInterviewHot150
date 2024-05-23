@@ -26,6 +26,25 @@ using namespace std;
 
 class Solution {
 public:
+	bool isMapEqual(unordered_map<string, int> A, unordered_map<string, int> B)
+	{
+		for (auto& x : A)
+		{
+			if (B.find(x.first) == B.end())
+			{
+				return false;
+			}
+			else
+			{
+				if (B[x.first] != x.second)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
 	vector<int> findSubstring(string s, vector<string>& words) {
 
 		//slipWindows + hashMap
@@ -34,7 +53,7 @@ public:
 		for (auto& x : words)
 		{
 			//if it can't found
-			if (hashMap.find(x) != hashMap.end())
+			if (hashMap.find(x) == hashMap.end())
 			{
 				hashMap[x] = 1;
 			}
@@ -49,13 +68,13 @@ public:
 			return results;
 		}
 		int start = 0 /*Where the position starts.*/, width = words[0].size(), length = words.size();
-		for (start < s.size() - width * words.size(); ++start)
+		for (;start < width; ++start)
 		{
 			unordered_map<string, int> tempHashMap;
 			int i = start, j = start; //actual pointer 
-			while (j < start + (i + length) * width && j < s.size())
+			while (j < start + length * width && j < s.size())
 			{
-				auto y = s.substr(j, j + width);
+				auto y = s.substr(j, width);
 				if (tempHashMap.find(y)==tempHashMap.end())
 				{
 					tempHashMap[y] = 1;
@@ -65,31 +84,42 @@ public:
 				{
 					++tempHashMap[y];
 				}
-				j += width；
+				j += width;
 			}
 			//初建立
-			if(tempHashMap.e)
-			while (start + (i + length) * width < s.size())
+			if (isMapEqual(hashMap, tempHashMap))
 			{
-
+				results.push_back(i);
 			}
-
-			for (int i = 0; start + (i + length) * width < s.size(); ++i)
+			i+=width;
+			j+=width;
+			while (j <= s.size())
 			{
-				for (int j = i; j + 1 <= i + length/*这个判断有待商榷*/; ++j)
+				auto y = s.substr(j - width, width);
+				if (tempHashMap.find(y) == tempHashMap.end())
 				{
-					auto tempS = s.substr(start + j * width, start + (j + 1) * width);
-					if (tempHashMap.find(tempS) == tempHashMap.end())
+					tempHashMap[y] = 1;
+				}
+				else
+				{
+					++tempHashMap[y];
+				}
+				auto z = s.substr(i - width, width);
+				{
+					--tempHashMap[z];
+					if (tempHashMap[z] <= 0)
 					{
-						tempHashMap[tempS] = 1;
-					}
-					else
-					{
-						++tempHashMap[tempS];
+						tempHashMap.erase(z);
 					}
 				}
+				if (isMapEqual(hashMap, tempHashMap))
+				{
+					results.push_back(i);
+				}
+				i += width;
+				j += width;
 			}
-
 		}
+		return results;
 	}
 };
