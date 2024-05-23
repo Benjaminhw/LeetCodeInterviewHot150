@@ -40,6 +40,8 @@ add_subdirectory ("209-minSubArrayLen")
 add_subdirectory ("3-lengthOfLongestNoRepeatSubstring")
 add_subdirectory ("383-CanConstruct")
 add_subdirectory ("30-connectAllTheSubstring")
+add_subdirectory ("205-isIsomorphic")
+add_subdirectory ("290-wordPattern")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
