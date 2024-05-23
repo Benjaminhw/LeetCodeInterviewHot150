@@ -42,6 +42,7 @@ add_subdirectory ("383-CanConstruct")
 add_subdirectory ("30-connectAllTheSubstring")
 add_subdirectory ("205-isIsomorphic")
 add_subdirectory ("290-wordPattern")
+add_subdirectory ("242-isAnagram")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
