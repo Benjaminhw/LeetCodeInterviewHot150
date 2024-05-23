@@ -26,12 +26,13 @@ public:
 		while (j < nums.size())
 		{
 			tempSum += nums[j];
-			while (i<j && tempSum > target)
+			while (tempSum >= target)
 			{
-				if (result == 0 || j - i + 1 < result)
+				if (result == 0 || j + 1 - i < result)
 				{
-					result = j - i + 1;
+					result = j + 1 - i;
 				}
+
 				tempSum -= nums[i];
 				++i;
 			}

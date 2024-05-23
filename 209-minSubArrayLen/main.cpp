@@ -3,8 +3,8 @@
 
 int main()
 {
-	vector<int > x = { 1,2,3,4,5 };
+	vector<int > x = { 2,3,1,2,4,3 };
 	Solution A;
-	auto y = A.minSubArrayLen(11, x);
+	auto y = A.minSubArrayLen(7, x);
 	return 0;
 }
