@@ -47,6 +47,8 @@ add_subdirectory ("1-TwoSum")
 add_subdirectory ("202-HappyNumber")
 add_subdirectory ("219-ContainsNearbyDuplicate")
 add_subdirectory ("228-SummaryRanges")
+add_subdirectory ("20-IsValidBracket")
+
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 # find_package(fmt CONFIG REQUIRED)
