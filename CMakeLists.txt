@@ -48,6 +48,7 @@ add_subdirectory ("202-HappyNumber")
 add_subdirectory ("219-ContainsNearbyDuplicate")
 add_subdirectory ("228-SummaryRanges")
 add_subdirectory ("20-IsValidBracket")
+add_subdirectory ("104-BinaryTreeMaxDepth")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
