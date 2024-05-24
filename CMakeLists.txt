@@ -45,7 +45,7 @@ add_subdirectory ("290-wordPattern")
 add_subdirectory ("242-isAnagram")
 add_subdirectory ("1-TwoSum")
 add_subdirectory ("202-HappyNumber")
-
+add_subdirectory ("219-ContainsNearbyDuplicate")
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 # find_package(fmt CONFIG REQUIRED)
