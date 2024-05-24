@@ -11,55 +11,73 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
 
 class Solution {
 public:
-	char recurse(string a)
-	{
-		auto x = a[0];
-		a = a.substr(1);
-		switch (x)
-		{
-			'(':
-			{
-				recurse(a);
-				break;
-			}
-			'[' :
-			{
-				break;
-			}
-			'{' :
-			{
-				break;
-			}
-			')' :
-			{
-				break;
-			}
-			']' :
-			{
-				break;
-			}
-			'}' :
-			{
-				break;
-			}
-		default:
-			break;
-		}
-	}
-
 	bool isValid(string s) {
 		//recursively eliminate the string
-		if (s.size() == 0)
+		stack<char> theStack;
+		theStack.push('x');
+
+		for (auto& x : s)
+		{
+			if (x == '(')
+			{
+				theStack.push('(');
+			}
+			else if (x == '[')
+			{
+				theStack.push('[');
+			}
+			else if (x == '{')
+			{
+				theStack.push('{');
+			}
+			else if (x == ']')
+			{
+				if (theStack.top() != '[')
+				{
+					return false;
+				}
+				else
+				{
+					theStack.pop();
+				}
+			}
+			else if (x == '}')
+			{
+				if (theStack.top() != '{')
+				{
+					return false;
+				}
+				else
+				{
+					theStack.pop();
+				}
+			}
+			else if (x == ')')
+			{
+				if (theStack.top() != '(')
+				{
+					return false;
+				}
+				else
+				{
+					theStack.pop();
+				}
+			}
+		}
+		if (theStack.size() == 1)
 		{
 			return true;
 		}
-		 
-		isValid(s.substr(1));
+		else
+		{
+			return false;
+		}
 	}
 };
