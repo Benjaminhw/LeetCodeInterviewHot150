@@ -50,6 +50,8 @@ add_subdirectory ("228-SummaryRanges")
 add_subdirectory ("20-IsValidBracket")
 add_subdirectory ("104-BinaryTreeMaxDepth")
 add_subdirectory ("100-SameTree")
+add_subdirectory ("226-InvertTree")
+add_subdirectory ("101-SymmetricTree")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
