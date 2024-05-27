@@ -53,6 +53,7 @@ add_subdirectory ("100-SameTree")
 add_subdirectory ("226-InvertTree")
 add_subdirectory ("101-SymmetricTree")
 add_subdirectory ("112-HasPathSum")
+add_subdirectory ("222-CountCompleteBinaryTreeNodes")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
