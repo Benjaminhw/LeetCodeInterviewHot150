@@ -55,6 +55,7 @@ add_subdirectory ("101-SymmetricTree")
 add_subdirectory ("112-HasPathSum")
 add_subdirectory ("222-CountCompleteBinaryTreeNodes")
 add_subdirectory ("108-SortedArray2BST")
+add_subdirectory ("35-SearchInsert")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
