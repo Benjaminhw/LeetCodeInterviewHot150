@@ -59,6 +59,8 @@ add_subdirectory ("35-SearchInsert")
 add_subdirectory ("67-BinarySum")
 add_subdirectory ("191-HammingWeight")
 add_subdirectory ("136-OnlyShowOnceNumber")
+add_subdirectory ("141-IfListHasCycle")
+
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
