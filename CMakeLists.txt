@@ -62,6 +62,7 @@ add_subdirectory ("136-OnlyShowOnceNumber")
 add_subdirectory ("141-IfListHasCycle")
 add_subdirectory ("21-MergeTwoLists")
 add_subdirectory ("9-isPalindrome")
+add_subdirectory ("66-PlusOne")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
