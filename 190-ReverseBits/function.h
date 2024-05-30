@@ -17,5 +17,6 @@ public:
 			r = (r << 1) | (n & 1);
 			n >>= 1;
 		}
+		return r;
 	}
 };

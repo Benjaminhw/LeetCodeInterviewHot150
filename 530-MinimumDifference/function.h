@@ -42,7 +42,7 @@ public:
 		}
 		else
 		{
-			result = min(result, pre - root->val);
+			result = min(result, abs(pre - root->val));
 			pre = root->val;
 		}
 

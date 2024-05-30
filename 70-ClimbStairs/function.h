@@ -29,5 +29,6 @@ public:
 			q = r;
 			r = q + p;
 		}
+		return r;
 	}
 };
