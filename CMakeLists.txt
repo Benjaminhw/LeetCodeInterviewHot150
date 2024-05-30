@@ -63,6 +63,8 @@ add_subdirectory ("141-IfListHasCycle")
 add_subdirectory ("21-MergeTwoLists")
 add_subdirectory ("9-isPalindrome")
 add_subdirectory ("66-PlusOne")
+add_subdirectory ("637-BinaryTreeAverageOfLevels")
+
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
