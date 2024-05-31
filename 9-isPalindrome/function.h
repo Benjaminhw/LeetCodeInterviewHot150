@@ -24,6 +24,7 @@ public:
 		//80% ShuanQ
 		auto s = to_string(x);
 		string ss = s;
+		ss.find("1");
 		reverse(ss.begin(), ss.end());
 		if (ss == s)
 		{

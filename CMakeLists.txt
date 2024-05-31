@@ -66,7 +66,9 @@ add_subdirectory ("66-PlusOne")
 add_subdirectory ("637-BinaryTreeAverageOfLevels")
 add_subdirectory ("530-MinimumDifference")
 add_subdirectory ("190-ReverseBits")
-
+add_subdirectory ("2-AddTwoNumbers")
+add_subdirectory ("70-ClimbStairs")
+add_subdirectory ("76-MinCoverSubString")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
