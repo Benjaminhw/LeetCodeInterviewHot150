@@ -111,12 +111,14 @@ public:
 					{
 						if (tempMap.find(s[j]) == tempMap.end())
 						{
+							++j;
 							break;
 						}
 						else
 						{
 							if (tempMap[s[j]] < theMap[s[j]])
 							{
+								++j;
 								break;
 							}
 						}
