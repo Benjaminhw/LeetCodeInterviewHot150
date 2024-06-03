@@ -69,6 +69,7 @@ add_subdirectory ("190-ReverseBits")
 add_subdirectory ("2-AddTwoNumbers")
 add_subdirectory ("70-ClimbStairs")
 add_subdirectory ("76-MinCoverSubString")
+add_subdirectory ("36-isValidSudoku")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
