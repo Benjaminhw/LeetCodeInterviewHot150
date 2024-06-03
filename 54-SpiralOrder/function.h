@@ -62,8 +62,8 @@ public:
 		{
 			int posx, posy;
 			//外层的是y 里层的是x
-			returnPosition(i, n, m, posy, posx);
-			result.emplace_back(matrix[posx][posy]);
+			returnPosition(i, n, m, posx, posy);
+			result.emplace_back(matrix[posy][posx]);
 			++i;
 		}
 		return result;
