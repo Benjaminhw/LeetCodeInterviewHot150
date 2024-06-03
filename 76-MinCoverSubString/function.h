@@ -52,19 +52,25 @@ public:
 		}
 	}
 
-	bool ifContains(unordered_map<char, int> S, unordered_map<char, int> sin)
+	bool ifContains(unordered_map<char, int>& S, unordered_map<char, int>& sin, char& preChar)
 	{
+		if (S.find(preChar) == S.end() && preChar != '?')
+		{
+			return false;
+		}
 		for (auto& x : sin)
 		{
 			if (S.find(x.first) != S.end())
 			{
 				if (S[x.first] < x.second)
 				{
+					preChar = x.first;
 					return false;
 				}
 			}
 			else
 			{
+				preChar = x.first;
 				return false;
 			}
 		}
@@ -87,7 +93,8 @@ public:
 		unordered_map<char, int> tempMap; //for ±éÀútempMap¼´¿É
 		unordered_map<char, int> theMap;
 
-		int i = 0, j = 0;
+		int i = 0, j = 0, answeri = 0, answerj = 0;
+
 
 		while (i < t.size())
 		{
@@ -96,19 +103,23 @@ public:
 			++i;
 		}
 
+		bool tempBooL = true;
+		char preChar = '?';
+
 		while (i <= s.size())
 		{
-			if (ifContains(tempMap, theMap))
+			if (tempBooL && ifContains(tempMap, theMap, preChar)) //tempBool
 			{
-				while ( j < i && j < s.size())
+				while (j < i && j < s.size())
 				{
-					if ((ans == "") || ans.size() > i - j)
+					if (answeri - answerj > i - j || (answeri == 0 && answerj == 0))
 					{
-						ans = s.substr(j, i - j);
+						answeri = i;
+						answerj = j;
 					}
-					deleteChar(s[j], tempMap);
 					if (theMap.find(s[j]) != theMap.end())
 					{
+						deleteChar(s[j], tempMap);
 						if (tempMap.find(s[j]) == tempMap.end())
 						{
 							++j;
@@ -128,10 +139,19 @@ public:
 			}
 			if (i < s.size())
 			{
-				addChar(s[i], tempMap);
+				if (theMap.find(s[i]) == theMap.end())
+				{
+					tempBooL = false;
+				}
+				else
+				{
+					addChar(s[i], tempMap);
+					tempBooL = true;
+				}
 			}
 			++i;
 		}
+		ans = s.substr(answerj, answeri - answerj);
 		return ans;
 	}
 };
