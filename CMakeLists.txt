@@ -72,6 +72,7 @@ add_subdirectory ("76-MinCoverSubString")
 add_subdirectory ("36-isValidSudoku")
 add_subdirectory ("54-SpiralOrder")
 add_subdirectory ("73-SetZeros")
+add_subdirectory ("48-Rotate90degree")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
