@@ -76,6 +76,7 @@ add_subdirectory ("48-Rotate90degree")
 add_subdirectory ("287-GameOfLife")
 add_subdirectory ("49-GroupAnagrams")
 add_subdirectory ("128-LongestConsecutive")
+add_subdirectory ("56-MergeTheInterval")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
