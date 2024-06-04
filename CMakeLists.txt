@@ -74,6 +74,7 @@ add_subdirectory ("54-SpiralOrder")
 add_subdirectory ("73-SetZeros")
 add_subdirectory ("48-Rotate90degree")
 add_subdirectory ("287-GameOfLife")
+add_subdirectory ("49-GroupAnagrams")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
