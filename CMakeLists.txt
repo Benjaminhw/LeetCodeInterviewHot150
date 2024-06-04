@@ -6,7 +6,7 @@ cmake_minimum_required (VERSION 3.12)
 project ("LeetCodeInterviewClassic150")
 
 # 包含子项目 CodeToTests
-add_subdirectory ("CodeToTests")
+# add_subdirectory ("CodeToTests")
 add_subdirectory ("26-RemoveTheRepeatedOnesInOrderedArray")
 add_subdirectory ("80-RemoveTheRepeatedOnesInOrderedArrayII")
 add_subdirectory ("169-MajorityElements")
@@ -75,6 +75,7 @@ add_subdirectory ("73-SetZeros")
 add_subdirectory ("48-Rotate90degree")
 add_subdirectory ("287-GameOfLife")
 add_subdirectory ("49-GroupAnagrams")
+add_subdirectory ("128-LongestConsecutive")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
