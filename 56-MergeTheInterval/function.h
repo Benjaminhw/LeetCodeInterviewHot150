@@ -39,7 +39,7 @@ public:
 		int i = 1, rangeStart = intervals[0][0], rangeEnd = intervals[0][1];
 		while (i < intervals.size())
 		{
-			while (i < intervals.size() && intervals[i][0] <= intervals[i - 1][1])
+			while (i < intervals.size() && intervals[i][0] <= rangeEnd)
 			{
 				rangeEnd = max(rangeEnd, intervals[i][1]);
 				++i;
