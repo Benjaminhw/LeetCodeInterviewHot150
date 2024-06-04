@@ -35,6 +35,7 @@ public:
 		}
 		sort(intervals.begin(), intervals.end(), cmp());
 		vector<vector<int>> ans;
+		vector<int> tempVecInt;
 		int i = 1, rangeStart = intervals[0][0], rangeEnd = intervals[0][1];
 		while (i < intervals.size())
 		{
@@ -42,15 +43,20 @@ public:
 			{
 				rangeEnd = max(rangeEnd, intervals[i][1]);
 				++i;
+				if (i >= intervals.size())
+				{
+					goto labelA;
+				}
 			}
-			vector<int> tempVecInt = { rangeStart,rangeEnd };
+			tempVecInt = { rangeStart,rangeEnd };
 			ans.emplace_back(tempVecInt);
 			rangeStart = intervals[i][0];
 			rangeEnd = intervals[i][1];
 			++i;
 		}
 		//last one
-		vector<int> tempVecInt = { rangeStart,rangeEnd };
+	labelA:
+		tempVecInt = { rangeStart,rangeEnd };
 		ans.emplace_back(tempVecInt);
 		return ans;
 	}
