@@ -61,7 +61,8 @@ public:
 		while (i <= amount)
 		{
 			int posx, posy;
-			returnPosition(i, m, n, posx, posy);
+			//外层的是y 里层的是x
+			returnPosition(i, n, m, posx, posy);
 			result.emplace_back(matrix[posy][posx]);
 			++i;
 		}
