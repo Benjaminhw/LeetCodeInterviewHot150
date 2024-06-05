@@ -17,6 +17,14 @@ using namespace std;
 
 class Solution {
 public:
+	class cmp {
+	public:
+		bool operator()(vector<int> a, vector<int> b)
+		{
+			return a[0] < b[0];
+		}
+	};
+
 	int findMinArrowShots(vector<vector<int>>& points) {
 		if (points.size() == 0)
 		{
@@ -26,14 +34,25 @@ public:
 		{
 			return 1;
 		}
-		int rangeStart = points[0][0], rangeEnd[0][1];
+		sort(points.begin(), points.end(), cmp());
+		int rangeStart = points[0][0], rangeEnd = points[0][1], ans = 1;
 		//Need to find these intervals' overlapped part.
 		for (int i = 1; i < points.size(); ++i)
 		{
-			while (i < points.size() && i)
+			while (i < points.size() && points[i][0] <= rangeEnd)
 			{
-
+				rangeStart = points[i][0];
+				rangeEnd = min(rangeEnd, points[i][1]);
+				++i;
 			}
+			if (i >= points.size())
+			{
+				break;
+			}
+			++ans;
+			rangeStart = points[i][0];
+			rangeEnd = points[i][1];
 		}
+		return ans;
 	}
 };
