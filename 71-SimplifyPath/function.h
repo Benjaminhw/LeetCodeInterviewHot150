@@ -57,7 +57,7 @@ public:
 						tempStack.pop();
 					}
 				}
-				else if (i + 1 < path.size() && path[i + 1] == '/')
+				else if (i + 1 >= path.size() || (i + 1 < path.size() && path[i + 1] == '/'))
 				{
 					i += 2;
 				}
