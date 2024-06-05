@@ -31,7 +31,7 @@ class Solution {
 public:
 	int evalRPN(vector<string>& tokens) {
 		stack<int> tempStack;
-		int ans = tempStack.top();
+		int ans = 0;
 		for (int i = 0; i < tokens.size(); ++i)
 		{
 			if (tokens[i] == "*")
@@ -71,6 +71,6 @@ public:
 				tempStack.push(atoi(tokens[i].c_str()));
 			}
 		}
-		return ans;
+		return tempStack.top();
 	}
 };
