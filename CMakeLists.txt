@@ -82,6 +82,8 @@ add_subdirectory ("452-UseLeastArrowToShootBalloons")
 add_subdirectory ("71-SimplifyPath")
 add_subdirectory ("155-MinStack")
 add_subdirectory ("150-EvalRPN")
+add_subdirectory ("98-IsValidBST")
+
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
