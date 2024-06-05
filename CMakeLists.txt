@@ -79,6 +79,7 @@ add_subdirectory ("128-LongestConsecutive")
 add_subdirectory ("56-MergeTheInterval")
 add_subdirectory ("57-InsertIntervals")
 add_subdirectory ("452-UseLeastArrowToShootBalloons")
+add_subdirectory ("71-SimplifyPath")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
