@@ -3,6 +3,5 @@
 
 int main()
 {
-	Solution A;
 	return 0;
 }

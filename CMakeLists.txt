@@ -77,6 +77,8 @@ add_subdirectory ("287-GameOfLife")
 add_subdirectory ("49-GroupAnagrams")
 add_subdirectory ("128-LongestConsecutive")
 add_subdirectory ("56-MergeTheInterval")
+add_subdirectory ("57-InsertIntervals")
+add_subdirectory ("452-UseLeastArrowToShootBalloons")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
