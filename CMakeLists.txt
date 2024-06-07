@@ -86,6 +86,7 @@ add_subdirectory ("98-IsValidBST")
 add_subdirectory ("224-BasicCalculator")
 add_subdirectory ("138-CopyRandomList")
 add_subdirectory ("92-ReverseBetween")
+add_subdirectory ("61-RotateRight")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
