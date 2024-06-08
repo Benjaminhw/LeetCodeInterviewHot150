@@ -87,6 +87,8 @@ add_subdirectory ("224-BasicCalculator")
 add_subdirectory ("138-CopyRandomList")
 add_subdirectory ("92-ReverseBetween")
 add_subdirectory ("61-RotateRight")
+add_subdirectory ("86-PartitionOfList")
+add_subdirectory ("82-deleteDuplicatesList")
 
 # set(CMAKE_TOOLCHAIN_FILE "${sourceDir}/../vcpkg/scripts/buildsystems/vcpkg.cmake")
 
