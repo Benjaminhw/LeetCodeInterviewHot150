@@ -30,7 +30,7 @@ public:
 			else
 			{
 				p->next = head;
-				p = p->next
+				p = p->next;
 			}
 			head = head->next;
 		}
