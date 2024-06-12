@@ -99,7 +99,15 @@ public:
 		{
 			if (j + k < size)
 			{
-				reverseBetween(head, j, j + k);
+				
+				if (j == 0)
+				{
+					realHead = reverseBetween(head, j, j + k);
+				}
+				else
+				{
+					reverseBetween(head, j, j + k);
+				}
 				j += k + 1;
 			}
 			else
@@ -108,5 +116,6 @@ public:
 				break;
 			}
 		}
+		return realHead;
 	}
 };
