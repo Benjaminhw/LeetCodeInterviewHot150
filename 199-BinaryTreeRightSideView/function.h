@@ -39,7 +39,7 @@ public:
 	vector<int> rightSideView(TreeNode* root) {
 		levelThrough(root, theLevel);
 		vector<int> theAnswers;
-		for (int i = 0; i <= theLevel; ++i)
+		for (int i = 0; i < answers.size(); ++i)
 		{
 			theAnswers.emplace_back(answers[i]);
 		}
